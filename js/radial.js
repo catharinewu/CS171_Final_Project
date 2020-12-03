@@ -9,6 +9,7 @@ var svg = d3.select("#radial1")
         .attr("height", height)
 
     g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
 let div = d3.select("body").append("div")
     .attr("class", "tooltip-radial")
     .style("opacity", '0')

@@ -25,6 +25,16 @@ class mapIncome {
             .attr("height", vis.height)
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
+        // add notes
+        vis.svg.append('g')
+            .attr('class', 'notes')
+            .append('text')
+            .text('Hover over the bubbles for more details')
+            .attr('transform', `translate(${vis.width / 1.8}, ${20})`)
+
+            .attr('text-anchor', 'middle');
+
+
         // create a projection
         vis.projection = d3.geoMercator()
             .center([0,20])                // GPS of location to zoom on
