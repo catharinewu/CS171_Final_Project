@@ -446,15 +446,6 @@ class Sunburst {
         d3.select(self.frameElement).style("height", vis.height + "px");
 
 
-        $(document).ready(function(){
-            $(".data").hover(function(){
-                $(this).css("background-color", "yellow");
-                d3.select(".China").attr("fill", "green")
-            }, function(){
-                $(this).css("background-color", "blue");
-            });
-        });
-
     }
 
 }
