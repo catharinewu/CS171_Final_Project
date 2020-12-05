@@ -9,7 +9,7 @@ class Sunburst {
         this.data = displayData
         this.formatNumber = d3.format(",d");
         this.b = {
-            w: 150, h: 30, s: 3, t: 10
+            w: 130, h: 30, s: 3, t: 10
         };
 
         this.initVis();
@@ -369,6 +369,7 @@ class Sunburst {
 
             }
             else{
+                percentage = "100"
                 d3.select("#percentage")
                     .text(d.data.name)
                 d3.select("#content").text(Math.round(d.value).toLocaleString() + " International students")

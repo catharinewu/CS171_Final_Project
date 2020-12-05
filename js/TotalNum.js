@@ -165,7 +165,7 @@ class TotalNum {
                     .style("top", event.pageY + "px")
                     .html(`
                      <div>
-                         <p> <b>${d.year.getFullYear()}</b> : ${+d.total}</p>
+                         <p> <b>${d.year.getFullYear()}</b> : ${d3.format(',')(+d.total)}</p>
                      </div>`);
             })
             .on("mouseleave", function(event, d) {
