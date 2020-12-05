@@ -298,7 +298,7 @@ class Sunburst {
                 .attr("y",vis.b.h / 2)
                 .attr("dy", "0.35em")
                 .attr("text-anchor", "middle")
-                .text(percentageString);
+                .text(percentageString + '%');
 
             // Make the breadcrumb trail visible, if it's hidden.
             d3.select("#trail")
