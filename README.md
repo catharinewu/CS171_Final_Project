@@ -19,3 +19,6 @@
 - Video:
     - file: CS 171 Final Project Recording.mp4
     - Youtube URL: https://youtu.be/YebByye96Aw
+
+### Note
+Resolution: The webpage is best viewed on a 13.3-inch macbook (2560x1600)
