@@ -9,7 +9,7 @@ class Sunburst {
         this.data = displayData
         this.formatNumber = d3.format(",d");
         this.b = {
-            w: 75, h: 30, s: 3, t: 10
+            w: 150, h: 30, s: 3, t: 10
         };
 
         this.initVis();
@@ -263,11 +263,14 @@ class Sunburst {
             console.log(d3.select("#trail").selectAll("g"))
             let g = d3.select("#trail")
                 .selectAll("g")
-                .data(nodeArray, function(d) { return d.data.name + d.depth; })
+                .data(nodeArray, function(d) {
+                    console.log(d.data.name + d.depth)
+                    return d.data.name + d.depth; })
                 .attr("fill", function(d) {console.log(d)});
 
             // Add breadcrumb and label for entering nodes.
             let entering = g.enter().append("svg:g");
+            //g.enter().append("svg:g");
 
             entering.append("svg:polygon")
                 .attr("points", vis.breadcrumbPoints)
@@ -281,8 +284,8 @@ class Sunburst {
                 .text(function(d) { return d.data.name; });
 
             // Set position for entering and updating nodes.
-            g.attr("transform", function(d, i) {
-                console.log(i)
+            entering.attr("transform", function(d, i) {
+                console.log(i,d)
                 return "translate(" + i * (vis.b.w + vis.b.s) + ", 0)";
             });
 
@@ -379,6 +382,7 @@ class Sunburst {
 
             vis.sequenceArray = vis.getAncestors(d);
             vis.updateBreadcrumbs(vis.sequenceArray, percentage);
+            console.log(vis.sequenceArray)
 
             // Fade all the segments.
             d3.selectAll("#paths")
