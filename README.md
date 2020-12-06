@@ -2,11 +2,7 @@
 
 ## Team Dream Seekers
 
-### Group Members: 
- - Catharine (Jiaxuan) Wu (21425273, jwu@g.harvard.edu)
- - Zhaodong Chen (60940029, zchen01@college.harvard.edu)
- - Kidist Alemu (41424133, kalemu@college.harvard.edu)
-
+### Group Members: Catharine Wu, Zhaodong Chen, Kidist Alemu
 
 ### Files
 - process book: `CS 171 Final Project Process Book.pdf`
